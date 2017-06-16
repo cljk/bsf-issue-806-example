@@ -5,69 +5,128 @@
       xmlns:h="http://java.sun.com/jsf/html"
 
       xmlns:b="http://bootsfaces.net/ui"
-      xmlns:p="http://primefaces.org/ui"
+
       >
     <h:head>
         <title>BootsFaces Basic Page</title>
 
-        <!-- Meta -->
- <meta charset="utf-8"/>
- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
- <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
- <meta name="author" content="VGB"/>
+<!-- 
+	====================
+	add my OWN version of bootstrap - (not of BootFaces)
+	====================
+ -->
 
- <!-- Favicon icon -->
- <link rel="shortcut icon" href="able-pro-frontend/ltr-vertical/assets/images/favicon.png" type="image/x-icon"/>
- <link rel="icon" href="able-pro-frontend/ltr-vertical/assets/images/favicon.ico" type="image/x-icon"/>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  crossorigin="anonymous"></script>
 
- <!-- Google font-->
- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
 
- <!-- iconfont -->
- <!--<link rel="stylesheet" type="text/css" href="able-pro-frontend/ltr-vertical/assets/icon/icofont/css/icofont.css"/>-->
- <h:outputStylesheet library="able-pro-frontend" name="ltr-vertical/assets/icon/icofont/css/icofont.css" target="head" />
-
- <!-- simple line icon -->
- <!--<link rel="stylesheet" type="text/css" href="able-pro-frontend/ltr-vertical/assets/icon/simple-line-icons/css/simple-line-icons.css"/>-->
- <h:outputStylesheet library="able-pro-frontend" name="ltr-vertical/assets/icon/simple-line-icons/css/simple-line-icons.css" target="head" />
-
- <!-- Required Fremwork -->
- <!--<link rel="stylesheet" type="text/css" href="able-pro-frontend/bower_components/bootstrap/dist/css/bootstrap.min.css"/>-->
- <h:outputStylesheet library="able-pro-frontend" name="bower_components/bootstrap/dist/css/bootstrap.min.css" target="head" />
-
- <!-- bash syntaxhighlighter css -->
- <!--<link type="text/css" rel="stylesheet" href="able-pro-frontend/bower_components/syntaxhighlighter/styles/shCoreDjango.css"/>-->
- <h:outputStylesheet library="able-pro-frontend" name="bower_components/syntaxhighlighter/styles/shCoreDjango.css" target="head" />
-
- <!-- Style.css -->
-<!--
- <link rel="stylesheet" type="text/css" href="able-pro-frontend/ltr-vertical/assets/css/main.css"/>
+<!-- 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 -->
-<h:outputStylesheet library="able-pro-frontend" name="ltr-vertical/assets/css/main.css" target="head" />
-
-
- <!-- Responsive.css-->
- <!--<link rel="stylesheet" type="text/css" href="able-pro-frontend/ltr-vertical/assets/css/responsive.css"/>-->
- <h:outputStylesheet library="able-pro-frontend" name="ltr-vertical/assets/css/responsive.css" target="head" />
-
- <!--color css-->
- <!--<link rel="stylesheet" type="text/css" href="able-pro-frontend/ltr-vertical/assets/css/color/color-1.min.css" id="color"/>-->
- <h:outputStylesheet library="able-pro-frontend" name="ltr-vertical/assets/css/color/color-1.min.css" target="head" />
-
-
     </h:head>
+
     <h:body>
-        <b:container id="bContainer">
+
+     <b:navBar brand="Brand" brandHref="#" inverse="true" fixed="top">
+            <b:navbarLinks>
+                <b:navLink value="Link" href="#"></b:navLink>
+                <b:navLink value="Link" href="#"></b:navLink>
+                <b:dropMenu value="Dropdown">
+                    <b:navLink value="Action" href="#"></b:navLink>
+                    <b:navLink value="Another action" href="#"></b:navLink>
+                    <b:navLink value="Something else here" href="#"></b:navLink>
+                    <b:navLink></b:navLink>
+                    <b:navLink header="Nav header"></b:navLink>
+                    <b:navLink value="Separated link" href="#"></b:navLink>
+                    <b:navLink value="One more separated link" href="#"></b:navLink>
+                </b:dropMenu>
+            </b:navbarLinks>
+            <h:form styleClass="navbar-form navbar-right">
+                <div class="form-group">
+                    <b:inputText placeholder="Email" fieldSize="sm"/>
+                    <!--input type="text" class="form-control" placeholder="Search"/-->
+                </div>
+                <div class="form-group">
+                    <b:inputText placeholder="Password" fieldSize="sm"/>
+                </div> 
+                #{' '}
+                <b:commandButton action="a" value="Sign in" look="success" icon="chevron-right" iconAlign="right"/>
+            </h:form>
+        </b:navBar>
+                
+    <b:form>
+        <b:jumbotron>
+            <b:container>
+                <h1>Hello, world!</h1>
+                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. 
+                   Use it as a starting point to create something more unique.
+                </p>
+                <p>
+                    <a href="https://github.com/TheCoder4eu/BootsFaces-examples/blob/master/src/main/webapp/jumbotron.xhtml" class="btn btn-lg btn-info">View Page Source »</a>
+                </p>
+            </b:container>
+
+        </b:jumbotron>
+        <b:container>
             <b:row>
-                <b:column>
-
-                    <h1>Hello, world!</h1>
-                    <b:button value="test" />
-
-                  <p:button value="p test" styleClass="btn btn-default"/>
+                <b:column col-md="4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, 
+                       ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><b:button outcome="" value="View details »"/></p>
+                </b:column>
+                <b:column col-md="4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, 
+                       ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><b:button outcome="" value="View details »"/></p>
+                </b:column>
+                <b:column col-md="4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, 
+                       ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><b:button outcome="" value="View details »"/></p>
                 </b:column>
             </b:row>
+             <b:row>
+                <b:column mediumScreen="6" style="background: #ccc;" id="counterColumn">
+                    <h1>Counter <b:badge value="#{testBean.counter}" /> </h1>
+                </b:column>
+                <b:column mediumScreen="6" style="background: #eee;">
+					<h2>---test---- </h2>
+                    <b:button value="test" />
+                    <b:commandButton value="increment" actionListener="#{testBean.incrementCounter}">
+                    	<f:ajax render="counterColumn"/>
+                    </b:commandButton>
+                    
+                     <b:colorPicker opacity="true" format="rgb" label="Choose an RBB color" />
+                </b:column>
+            </b:row>
+            <hr/>
+            <footer>
+            <p>© Company 2014</p>
+            </footer>
         </b:container>
+    
+    </b:form>
+    
+    
+    
+    
+        <script type="text/javascript">
+
+$().ready(function() {
+        $("h2").html(
+                "jQuery "+ (jQuery ? $().jquery : "NOT") +" loaded" + 
+                " // Bootstrap: " + $.fn.alert.Constructor.VERSION
+                );
+});
+        </script>
     </h:body>
 </html>

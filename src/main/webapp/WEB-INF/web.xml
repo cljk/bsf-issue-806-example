@@ -12,15 +12,6 @@
             30
         </session-timeout>
     </session-config>
-<!--
-    <listener>
-        <listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
-    </listener>-->
-    <listener>
-        <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
-    </listener>
-
-
 
     <context-param>
             <param-name>javax.faces.PROJECT_STAGE</param-name>
@@ -35,26 +26,17 @@
             <param-value>true</param-value>
         </context-param>
 
-
+<!-- 
         <context-param>
           <param-name>primefaces.THEME</param-name>
           <param-value>none</param-value>
         </context-param>
-
+ -->
 
     <context-param>
         <param-name>BootsFaces_USE_VIEWPORT</param-name>
         <param-value>false</param-value>
-    </context-param>
-
-    <!-- The BootsFaces_USETHEME context-param controls the loading of the bootstrap-theme.css -->
-<!-- The default is false, when set to true the bootstrap-theme.css will be loaded -->
-<context-param>
-    <param-name>BootsFaces_USETHEME</param-name>
-    <param-value>false</param-value>
-</context-param>
-
-<context-param>
+    </context-param><context-param>
     <param-name>net.bootsfaces.get_jquery_from_cdn</param-name>
     <param-value>true</param-value>
 </context-param>
@@ -69,6 +51,11 @@
 <context-param>
     <param-name>net.bootsfaces.get_fontawesome_from_cdn</param-name>
     <param-value>true</param-value>
+</context-param>
+
+<context-param>
+	<param-name>net.bootsfaces.get_bootstrap_components_from_cdn</param-name>
+	<param-value>false</param-value>
 </context-param>
 
 </web-app>
